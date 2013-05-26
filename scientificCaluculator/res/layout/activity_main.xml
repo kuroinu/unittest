@@ -1,0 +1,238 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/calc_background"
+        android:columnCount="4"
+        android:padding="10dip" >
+
+        <!-- row0 -->
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_column="0"
+            android:layout_columnSpan="4"
+            android:layout_gravity="fill_horizontal"
+            android:layout_row="0"
+            android:background="@drawable/disp_background"
+            android:gravity="right"
+            android:padding="5dip"
+            android:layout_height="40sp"
+            android:textSize="20sp" />
+
+        <!-- row1 -->
+
+        <Space
+            android:id="@+id/space1"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_row="1" />
+
+        <Button
+            android:id="@+id/key_back"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:background="@drawable/btn_background"
+            android:text="BS" />
+
+        <Button
+            android:id="@+id/key_undo"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:background="@drawable/btn_background"
+            android:text="UND" />
+
+        <Button
+            android:id="@+id/key_clear"
+            android:layout_column="3"
+            android:layout_row="1"
+            android:background="@drawable/btn_background"
+            android:text="CLR" />
+
+        <!-- row2 -->
+
+        <Button
+            android:id="@+id/key_log"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:background="@drawable/btn_background"
+            android:text="log" />
+
+        <Button
+            android:id="@+id/key_power"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:background="@drawable/btn_background"
+            android:text="^" />
+
+        <Button
+            android:id="@+id/key_root"
+            android:layout_column="2"
+            android:layout_row="2"
+            android:background="@drawable/btn_background"
+            android:text="√" />
+
+        <Button
+            android:id="@+id/key_mod"
+            android:layout_column="3"
+            android:layout_row="2"
+            android:background="@drawable/btn_background"
+            android:text="%" />
+
+        <!-- row3 -->
+
+        <Button
+            android:id="@+id/key_leftblacket"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:background="@drawable/btn_background"
+            android:text="(" />
+
+        <Button
+            android:id="@+id/key_rightblacket"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:background="@drawable/btn_background"
+            android:text=")" />
+
+        <Button
+            android:id="@+id/key_dot"
+            android:layout_column="2"
+            android:layout_row="3"
+            android:background="@drawable/btn_background"
+            android:text="." />
+
+        <Button
+            android:id="@+id/key_plusminus"
+            android:layout_column="3"
+            android:layout_row="3"
+            android:background="@drawable/btn_background"
+            android:text="±" />
+
+        <!-- row4 -->
+
+        <Button
+            android:id="@+id/key_seven"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:background="@drawable/btn_background"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/key_eight"
+            android:layout_column="1"
+            android:layout_row="4"
+            android:background="@drawable/btn_background"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/key_nine"
+            android:layout_column="2"
+            android:layout_row="4"
+            android:background="@drawable/btn_background"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/key_divide"
+            android:layout_column="3"
+            android:layout_row="4"
+            android:background="@drawable/btn_background"
+            android:text="÷" />
+
+        <!-- row5 -->
+
+        <Button
+            android:id="@+id/key_four"
+            android:layout_column="0"
+            android:layout_row="5"
+            android:background="@drawable/btn_background"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/key_five"
+            android:layout_column="1"
+            android:layout_row="5"
+            android:background="@drawable/btn_background"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/key_six"
+            android:layout_column="2"
+            android:layout_row="5"
+            android:background="@drawable/btn_background"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/key_multi"
+            android:layout_column="3"
+            android:layout_gravity="left|top"
+            android:layout_row="5"
+            android:background="@drawable/btn_background"
+            android:text="×" />
+
+        <!-- row6 -->
+
+        <Button
+            android:id="@+id/key_one"
+            android:layout_column="0"
+            android:layout_row="6"
+            android:background="@drawable/btn_background"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/key_two"
+            android:layout_column="1"
+            android:layout_row="6"
+            android:background="@drawable/btn_background"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/key_three"
+            android:layout_column="2"
+            android:layout_row="6"
+            android:background="@drawable/btn_background"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/key_minus"
+            android:layout_column="3"
+            android:layout_row="6"
+            android:background="@drawable/btn_background"
+            android:text="-" />
+
+        <!-- row7 -->
+
+        <Button
+            android:id="@+id/key_zero"
+            android:layout_column="0"
+            android:layout_row="7"
+            android:background="@drawable/btn_background"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/key_equal"
+            android:layout_column="1"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"
+            android:layout_row="7"
+            android:background="@drawable/btn_background"
+            android:text="=" />
+
+        <Button
+            android:id="@+id/key_plus"
+            android:layout_column="3"
+            android:layout_row="7"
+            android:background="@drawable/btn_background"
+            android:text="+" />
+    </GridLayout>
+
+</RelativeLayout>

@@ -1,0 +1,92 @@
+package test.test;
+
+import java.lang.reflect.Constructor;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		for (String s : "1÷10.2".split("[^(0-9¥¥.)]")) {
+			// System.out.println(s);
+		}
+		for (String s : "(1÷10)+2".split("\\Q")) {
+			// System.out.println(s);
+		}
+		// 判定する文字列
+		String str = "123.05";
+
+		// 判定するパターンを生成
+		Pattern p = Pattern.compile("\\d+\\.0$");
+		Matcher m = p.matcher(str);
+
+		// 画面表示
+		System.out.println(m.find());
+		System.out.println(str.replaceAll("(\\d+)\\.0$", "$1"));
+
+		List<String> l = new ArrayList<String>();
+		l.add("500");
+
+		// インナークラスをリフレクション
+		try {
+			Main x = new Main();
+			Class cl = Main.Test.class;
+			Constructor con = cl.getConstructor(new Class[] { Main.class });
+			Main.Test a = (Main.Test) con.newInstance(new Object[] { x });
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		Sample<String> s = new Sample<String>() {
+			@Override
+			public String s(String t) {
+				return t;
+			}
+
+		};
+		System.out.println(s.s("S"));
+
+		System.out.println(new ISample<String>() {
+			public String out(String t) {
+				return t;
+			}
+		}.out("test"));
+
+		String roots = "√5+√50+6";
+		String after = roots;
+		String regex = "√-?\\d+";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(roots);
+		while (matcher.find()) {
+			System.out.println(matcher.group());
+			after = after.replaceFirst(matcher.group(), "ab");
+			System.out.println(after);
+		}
+
+		String t = "(Ms1p3×4)";
+//		System.out
+//				.println(t.replaceFirst("\\((.+)\\)", "$1").replace("p", "+"));
+
+		Matcher ma = Pattern.compile("(\\d+[×÷])?\\(.+\\).*").matcher(t);
+		while (ma.find()) {
+		    System.out.println(ma.group());
+		}
+		System.out.println(t.matches("\\([0-9ps×÷M]+\\)"));
+
+	}
+
+	public class Test {
+		int s;
+
+		public String ss() {
+			// return String.valueOf(s);
+			return null;
+		}
+	}
+
+}

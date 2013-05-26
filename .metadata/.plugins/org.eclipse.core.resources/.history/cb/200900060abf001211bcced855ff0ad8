@@ -1,0 +1,56 @@
+package ex.practice.calc.calucurator;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
+import java.text.ParseException;
+
+import org.junit.Before;
+import org.junit.experimental.runners.Enclosed;
+import org.junit.experimental.theories.DataPoints;
+import org.junit.experimental.theories.Theories;
+import org.junit.experimental.theories.Theory;
+import org.junit.runner.RunWith;
+
+@RunWith(Enclosed.class)
+public class CalcuratorTest {
+
+	@RunWith(Theories.class)
+	public static class caluculateで文字列を評価する場合 {
+		Calcurator target;
+
+		@Before
+		public void setUp() throws Exception {
+			target = new Calcurator();
+		}
+
+		@DataPoints
+		public static Fixture[] DATAS = { //new Fixture("1+1", "2"),
+			new Fixture("(1×1)", "1"),
+			new Fixture("2×(2a1)", "6"),
+			new Fixture("2+(2a1)", "5"),
+			new Fixture("2+(2a1)+3", "8"),
+			new Fixture("2+(2a1a3s2)+3", "9"),
+			new Fixture("2+(M2a1)", "1"),
+			new Fixture("2+(M2a1)×2", "0"),
+			new Fixture("2+(M2sM2)×2", "-6"),
+				 };
+
+		@Theory
+		public void 正しく計算されること(Fixture data) throws ParseException {
+			String actual = target.caluculate(data.parameter);
+			assertThat(data.expected, is(actual));
+		}
+
+		static class Fixture {
+			String parameter;
+			String expected;
+
+			Fixture(String parameter, String expected) {
+				this.parameter = parameter;
+				this.expected = expected;
+			}
+		}
+	}
+
+}

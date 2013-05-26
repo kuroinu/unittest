@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from プロジェクト &apos;minicarender&apos;&#x0A;- 元のプロジェクト: &apos;minicarender&apos;&#x0A;- オリジナル要素: &apos;activity_main.xml&apos;" description="要素の削除" element1="res/menu/activity_main.xml" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1366901142617" subPackages="false" version="1.0"/>
+</session>

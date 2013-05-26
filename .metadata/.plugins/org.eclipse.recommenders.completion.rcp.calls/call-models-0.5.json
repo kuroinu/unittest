@@ -1,0 +1,122 @@
+{
+  "/Applications/eclipse/android/platforms/android-16/android.jar": {
+    "location": "/Applications/eclipse/android/platforms/android-16/android.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/Applications/eclipse/android/platforms/android-16/android.jar\u0027. Neither fingerprint \u002747ffff881d2fe54d5c646fcc3a646bf291008448\u0027 nor symbolic name \u0027android\u0027 are known."
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/calc/src": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/calc/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/calc/src\u0027. Skipped."
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/calc/gen": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/calc/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/calc/gen\u0027. Skipped."
+  },
+  "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar",
+    "status": "RESOLVED"
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/calcTest/src": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/calcTest/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/calcTest/src\u0027. Skipped."
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/experiment/src": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/experiment/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/experiment/src\u0027. Skipped."
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/ex.free/gen": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/ex.free/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/ex.free/gen\u0027. Skipped."
+  },
+  "/Applications/eclipse/android/platforms/android-15/android.jar": {
+    "location": "/Applications/eclipse/android/platforms/android-15/android.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/Applications/eclipse/android/platforms/android-15/android.jar\u0027. Neither fingerprint \u002792822ec981a4d0a7f002c792e7b3b60f9a1f26fa\u0027 nor symbolic name \u0027android\u0027 are known."
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/FizzBuzz/test/src": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/FizzBuzz/test/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/FizzBuzz/test/src\u0027. Skipped."
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/FizzBuzz/src": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/FizzBuzz/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/FizzBuzz/src\u0027. Skipped."
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/JUnitPractice/src": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/JUnitPractice/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/JUnitPractice/src\u0027. Skipped."
+  },
+  "/Applications/eclipse/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar": {
+    "location": "/Applications/eclipse/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/Applications/eclipse/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar\u0027. Neither fingerprint \u0027254c9660266e1177c94b1a9ba05f6f757e7fb85a\u0027 nor symbolic name \u0027org.hamcrest.core\u0027 are known."
+  },
+  "/Applications/eclipse/plugins/org.junit_4.10.0.v4_10_0_v20120426-0900/junit.jar": {
+    "location": "/Applications/eclipse/plugins/org.junit_4.10.0.v4_10_0_v20120426-0900/junit.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/Applications/eclipse/plugins/org.junit_4.10.0.v4_10_0_v20120426-0900/junit.jar\u0027. Neither fingerprint \u0027365907cf1e488e967f1d3e923d0111b36d930ee6\u0027 nor symbolic name \u0027junit\u0027 are known."
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/JUnitPractice/test/src": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/JUnitPractice/test/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/JUnitPractice/test/src\u0027. Skipped."
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/memo/gen": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/memo/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/memo/gen\u0027. Skipped."
+  },
+  "/Applications/eclipse/android/platforms/android-17/android.jar": {
+    "location": "/Applications/eclipse/android/platforms/android-17/android.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/Applications/eclipse/android/platforms/android-17/android.jar\u0027. Neither fingerprint \u00274ce719a74198cca562a8859e7d4ffa38f3ec26b4\u0027 nor symbolic name \u0027android\u0027 are known."
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/scientificcaluculator/gen": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/scientificcaluculator/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/scientificcaluculator/gen\u0027. Skipped."
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/scientificcaluculator/src": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/scientificcaluculator/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/scientificcaluculator/src\u0027. Skipped."
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/carender/gen": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/carender/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/carender/gen\u0027. Skipped."
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/minicarender/gen": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/minicarender/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/minicarender/gen\u0027. Skipped."
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/Chapter0417/gen": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/Chapter0417/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/Chapter0417/gen\u0027. Skipped."
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/Chapter0417/src": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/Chapter0417/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/Chapter0417/src\u0027. Skipped."
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/alphabethitter/gen": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/alphabethitter/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/alphabethitter/gen\u0027. Skipped."
+  },
+  "/Users/mitsunorinaraoka/Dropbox/workspace/Calcurator/src": {
+    "location": "/Users/mitsunorinaraoka/Dropbox/workspace/Calcurator/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/mitsunorinaraoka/Dropbox/workspace/Calcurator/src\u0027. Skipped."
+  }
+}

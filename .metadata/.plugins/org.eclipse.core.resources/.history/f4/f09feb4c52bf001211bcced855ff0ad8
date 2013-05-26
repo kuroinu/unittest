@@ -1,0 +1,9 @@
+package ex.practice.calc.calucurator;
+
+public class AbstractSubCalcurator {
+
+	public AbstractSubCalcurator() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+}

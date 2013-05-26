@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="2 個の要素を &apos;ic_launcher-web.png.icf&apos; にコピー&#x0A;- 元のプロジェクト: &apos;carender&apos;&#x0A;- 宛先要素: &apos;ic_launcher-web.png.icf&apos;&#x0A;- オリジナル要素:&#x0A;     ic_launcher-web.png&#x0A;     proguard-project.txt" description="ファイルをコピー" element1="ic_launcher-web.png" element2="proguard-project.txt" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1366640630175" target="/scientificcaluculator/ic_launcher-web.png.icf" units="0" version="1.0"/>
+</session>

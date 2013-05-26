@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="&apos;ex.practice.calc.converter.DefConverter.PRECALFORMULA&apos; の列挙型定数の名前を &apos;LGO&apos; から &apos;LOG&apos; に変更します&#x0A;- 元のプロジェクト: &apos;scientificcaluculator&apos;&#x0A;- オリジナル要素: &apos;ex.practice.calc.converter.DefConverter.PRECALFORMULA.LGO&apos;&#x0A;- 名前変更済み要素: &apos;ex.practice.calc.converter.DefConverter.PRECALFORMULA.LOG&apos;&#x0A;- リファクタリングされた要素の参照を更新&#x0A;- コメントおよびストリング内のテキスト出現箇所の更新" delegate="false" deprecate="false" description="列挙定数 &apos;LGO&apos; の名前を変更します" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.enum.constant" input="/src&lt;ex.practice.calc.converter{DefConverter.java[DefConverter[PRECALFORMULA^LGO" name="LOG" references="true" setter="false" stamp="1367763083115" textual="false" version="1.0"/>
+</session>

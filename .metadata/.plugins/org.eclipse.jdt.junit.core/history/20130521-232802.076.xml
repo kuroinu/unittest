@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="StringUtilTest" project="JUnitPractice" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="ex.practice.variablepattern.StringUtilTest" time="0.01">
+    <testsuite name="ex.practice.variablepattern.StringUtilTest.convertCamelCaseでフォーマット不正な文字列を入力する場合" time="0.001">
+      <testcase name="例外が発生する" classname="ex.practice.variablepattern.StringUtilTest.convertCamelCaseでフォーマット不正な文字列を入力する場合" time="0.001"/>
+    </testsuite>
+    <testsuite name="ex.practice.variablepattern.StringUtilTest.convertCamelCaseで文字列を変換する場合" time="0.009">
+      <testcase name="キャメルスタイル形式に変換される" classname="ex.practice.variablepattern.StringUtilTest.convertCamelCaseで文字列を変換する場合" time="0.009"/>
+    </testsuite>
+  </testsuite>
+</testrun>

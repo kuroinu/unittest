@@ -1,0 +1,15 @@
+package ex.practice.calc.validator;
+
+/**
+ * 最後が）か判定
+ * @author mitsunorinaraoka
+ *
+ */
+public class LastCharIsRightBlacket extends Validator {
+
+	@Override
+	protected boolean valid(String target) {
+		return false;
+	}
+
+}

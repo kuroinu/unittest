@@ -1,0 +1,16 @@
+package ex.practice.calc.calucurator;
+
+public class SqrtCalcurator extends AbstractSubCalcurator {
+
+	@Override
+	protected String _calcurate(String target) {
+		return null;
+	}
+
+	@Override
+	protected boolean isTarget(String that) {
+		// TODO 自動生成されたメソッド・スタブ
+		return false;
+	}
+
+}

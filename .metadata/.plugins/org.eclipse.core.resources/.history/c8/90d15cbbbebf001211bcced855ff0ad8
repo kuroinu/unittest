@@ -1,0 +1,10 @@
+package ex.practice.calc.validator;
+
+public class CanPutMinusCodeValidator extends Validator {
+
+	@Override
+	protected boolean valid(String target) {
+		return false;
+	}
+
+}

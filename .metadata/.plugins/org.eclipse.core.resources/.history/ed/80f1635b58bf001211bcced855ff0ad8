@@ -1,0 +1,18 @@
+package ex.practice.calc.calucurator;
+
+import ex.practice.calc.converter.DefConverter;
+
+public class RootCalcurator extends AbstractSubCalcurator {
+
+	@Override
+	protected String _calcurate(String target) {
+		return null;
+	}
+
+	@Override
+	protected boolean isTarget(String that) {
+		return that.matches(".*[" + DefConverter.PRECALFORMULA.ROOT.getValue()
+				+ "].*");
+	}
+
+}

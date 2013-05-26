@@ -1,0 +1,15 @@
+package ex.practice.calc.calucurator;
+
+public class BlanckecCalcurator extends AbstractSubCalcurator {
+
+	@Override
+	protected String _calcurate(String target) {
+		return null;
+	}
+
+	@Override
+	protected boolean isTarget(String that) {
+		return false;
+	}
+
+}

@@ -1,0 +1,13 @@
+package ex.practice.calc.calucurator;
+
+abstract class AbstractSubCalcurator {
+
+	private AbstractSubCalcurator next;
+
+	/**
+	 * 対象をターゲットとするか
+	 * @param that
+	 * @return
+	 */
+	protected abstract boolean isTarget(String that);
+}

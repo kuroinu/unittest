@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring abstract="true" comment="&apos;ex.practice.fizzbuzz.Randomizer&apos; からインターフェース &apos;ex.practice.fizzbuzz.IRandmizer&apos; を抽出します&#x0A;- 元のプロジェクト: &apos;JUnitPractice&apos;&#x0A;- オリジナル要素: &apos;ex.practice.fizzbuzz.Randomizer&apos;&#x0A;- 抽出済みインターフェース: &apos;ex.practice.fizzbuzz.IRandmizer&apos;&#x0A;- 抽出済みメンバー:&#x0A;     ex.practice.fizzbuzz.Randomizer.generic()&#x0A;- 使用可能な場合は、スーパー・タイプを使用" comments="true" description="インターフェース &apos;IRandmizer&apos; を抽出します" element1="/src&lt;ex.practice.fizzbuzz{Randomizer.java[Randomizer~generic" flags="589830" id="org.eclipse.jdt.ui.extract.interface" input="/src&lt;ex.practice.fizzbuzz{Randomizer.java[Randomizer" instanceof="false" name="IRandmizer" public="true" replace="true" stamp="1366813164074" version="1.0"/>
+</session>

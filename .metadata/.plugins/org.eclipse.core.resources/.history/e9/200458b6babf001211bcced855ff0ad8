@@ -1,0 +1,17 @@
+package ex.practice.calc.validator;
+
+public class CanPutOperatorValidator extends Validator {
+
+	@Override
+	protected boolean valid(String target) {
+		return isLastCharNumber(target) || isLastCharBackPuttable(target);
+	}
+
+	private boolean isLastCharNumber(String target) {
+		return new LastCharIsNumberValidator().isCongruence(target);
+	}
+
+	private boolean isLastCharBackPuttable(String target) {
+		return true;
+	}
+}

@@ -1,0 +1,19 @@
+package ex.practice.calc.validator;
+
+import ex.practice.calc.calucurator.Calcurator.CODE;
+
+public class CanPutMinusCodeValidator extends Validator {
+
+	@Override
+	protected boolean valid(String target) {
+		if (target.length() > 0) {
+			String lastChar = target.substring(target.length() - 1);
+
+			return CODE.MINUS.disp().equals(
+					target.substring(target.length() - 1));
+		} else {
+			return true;
+		}
+	}
+
+}

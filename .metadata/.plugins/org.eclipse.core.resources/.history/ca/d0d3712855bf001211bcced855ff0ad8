@@ -1,0 +1,17 @@
+package ex.practice.calc.calucurator;
+
+public class BlanckecCalcurator extends AbstractSubCalcurator {
+
+	@Override
+	protected String _calcurate(String target) {
+		// TODO 自動生成されたメソッド・スタブ
+		return null;
+	}
+
+	@Override
+	protected boolean isTarget(String that) {
+		// TODO 自動生成されたメソッド・スタブ
+		return false;
+	}
+
+}

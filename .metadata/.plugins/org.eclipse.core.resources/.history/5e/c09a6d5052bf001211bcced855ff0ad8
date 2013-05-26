@@ -1,0 +1,8 @@
+package ex.practice.calc.calucurator;
+
+public class AbstractSubCalcurator {
+
+	public AbstractSubCalcurator() {
+	}
+
+}

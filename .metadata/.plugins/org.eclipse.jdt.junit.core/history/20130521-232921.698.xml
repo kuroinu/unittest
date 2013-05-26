@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="convertCamelCaseで文字列を変換する場合 (失敗したテストを最初に)" project="JUnitPractice" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="ex.practice.variablepattern.StringUtilTest.convertCamelCaseで文字列を変換する場合" time="0.0">
+    <testcase name="キャメルスタイル形式に変換される" classname="ex.practice.variablepattern.StringUtilTest.convertCamelCaseで文字列を変換する場合" time="0.0"/>
+  </testsuite>
+</testrun>

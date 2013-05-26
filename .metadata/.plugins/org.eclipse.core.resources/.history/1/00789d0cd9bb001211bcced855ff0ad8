@@ -1,0 +1,15 @@
+package ex.practice.calc.validator;
+
+public class LastCharIsRightBlacket extends Validator {
+
+	public LastCharIsRightBlacket() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+	@Override
+	protected boolean valid(String target) {
+		// TODO 自動生成されたメソッド・スタブ
+		return false;
+	}
+
+}

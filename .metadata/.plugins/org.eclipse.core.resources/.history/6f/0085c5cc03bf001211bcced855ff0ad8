@@ -1,0 +1,11 @@
+package ex.practice.calc.calucurator;
+
+import junit.framework.TestCase;
+
+public class CalucuratorTest extends TestCase {
+
+	protected void setUp() throws Exception {
+		super.setUp();
+	}
+
+}

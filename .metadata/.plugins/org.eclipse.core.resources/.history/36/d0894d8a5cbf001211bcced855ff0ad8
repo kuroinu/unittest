@@ -1,0 +1,268 @@
+package ex.practice.calc.calucurator;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import ex.practice.calc.converter.DefConverter;
+
+/**
+ * 計算取りまとめ
+ *
+ * @author mitsunorinaraoka
+ *
+ */
+public class Calcurator {
+
+	/**
+	 * 演算子
+	 *
+	 * @author mitsunorinaraoka
+	 *
+	 */
+	public enum OPERATOR {
+		ADD("+", "a") {
+			public Calc createFormula(String value) {
+				return new Addition(value);
+			}
+		},
+		SUBTRACT("-", "s") {
+			public Calc createFormula(String value) {
+				return new Subtraction(value);
+			}
+		},
+		MULTI("×", "×") {
+			public Calc createFormula(String value) {
+				return new Multiplication(value);
+			}
+		},
+		DIVIDE("÷", "÷") {
+			public Calc createFormula(String value) {
+				return new Division(value);
+			}
+		},
+		MOD("%", "%") {
+			public Calc createFormula(String value) {
+				return new Mod(value);
+			}
+		},
+		POW("O", "O") {
+			public Calc createFormula(String value) {
+				return new Power(value);
+			}
+		},
+		EQUALS("=", "=") {
+			public Calc createFormula(String value) {
+				return new Equals(value);
+			}
+		};
+		private String value;
+		private String brancketVal;
+
+		public String getBrancketVal() {
+			return brancketVal;
+		}
+
+		private OPERATOR(String n, String brancketVal) {
+			this.value = n;
+			this.brancketVal = brancketVal;
+		}
+
+		public String getValue() {
+			return this.value;
+		}
+
+		public Calc createFormula(String value) {
+			return null;
+		}
+
+	}
+
+	/**
+	 * 計算実行
+	 *
+	 * @param evalTarget
+	 * @return
+	 */
+	public String caluculate(String evalTarget) {
+		return calcFactory(evalTarget).interpret();
+	}
+
+	/**
+	 * 計算メソッド組み立て
+	 *
+	 * @param originalString
+	 * @return
+	 */
+	private Calc calcFactory(String originalString) {
+		// 演算子配列
+		OPERATOR[] operators = pickOutLowPriorityOperators(originalString)
+				.toArray(new OPERATOR[0]);
+		// 　数値配列
+		String[] elements = pickOutFirstInterpretNumbers(originalString)
+				.toArray(new String[0]);
+		Calc calc = null;
+		for (int i = 0; i < elements.length; i++) {
+			String element = elements[i];
+
+			element = new BlacketCalcurator().join(new RootCalcurator())
+					.calcurate(element);
+
+			element = new LogCalcurator().calcurate(element);
+
+			// 剰余の計算
+			if (containsPrioritOperator(elements[i])) {
+				element = calcMultiAndDivide(element);
+			}
+			// 加減の計算
+			Calc tmpCalc = operators[i].createFormula(DefConverter.CODE.MINUS
+					.viewFromCode(element));
+			if (calc == null) {
+				calc = tmpCalc;
+			} else {
+				calc.join(tmpCalc);
+			}
+		}
+		return calc;
+	}
+
+	/**
+	 * +-で分割
+	 *
+	 * @param originalString
+	 * @return
+	 */
+	private List<OPERATOR> pickOutLowPriorityOperators(String originalString) {
+		List<OPERATOR> list = new ArrayList<OPERATOR>();
+		Matcher m = Pattern.compile("([" + lowPriorityOperators() + "])")
+				.matcher(originalString);
+		while (m.find()) {
+			list.add(m.group(1).equals(OPERATOR.ADD.getValue()) ? OPERATOR.ADD
+					: OPERATOR.SUBTRACT);
+		}
+		list.add(OPERATOR.EQUALS);
+		return list;
+	}
+
+	/**
+	 * 優先順位高で分割した演算子
+	 *
+	 * @param originalString
+	 * @return
+	 */
+	private List<OPERATOR> pickOutHighPriorityOperators(String originalString) {
+		List<OPERATOR> list = new ArrayList<OPERATOR>();
+		Matcher m = Pattern.compile("([" + highPriorityOperators() + "])")
+				.matcher(originalString);
+		while (m.find()) {
+			OPERATOR o;
+			if (m.group(1).equals(OPERATOR.MULTI.getValue())) {
+				o = OPERATOR.MULTI;
+			} else if (m.group(1).equals(OPERATOR.DIVIDE.getValue())) {
+				o = OPERATOR.DIVIDE;
+			} else if (m.group(1).equals(OPERATOR.MOD.getValue())) {
+				o = OPERATOR.MOD;
+			} else {
+				o = OPERATOR.POW;
+			}
+			list.add(o);
+		}
+		list.add(OPERATOR.EQUALS);
+		return list;
+	}
+
+	/**
+	 * +-の文字列取得
+	 *
+	 * @return
+	 */
+	private String lowPriorityOperators() {
+		return "\\" + OPERATOR.ADD.getValue() + "\\"
+				+ OPERATOR.SUBTRACT.getValue();
+	}
+
+	/**
+	 * ×÷%^の文字列取得
+	 *
+	 * @return
+	 */
+	private String highPriorityOperators() {
+		return OPERATOR.MULTI.getValue() + OPERATOR.DIVIDE.getValue()
+				+ OPERATOR.MOD.getValue() + OPERATOR.POW.getValue();
+	}
+
+	/**
+	 * 文字列を+-で分割
+	 *
+	 * @param target
+	 * @return
+	 */
+	private List<String> pickOutFirstInterpretNumbers(String target) {
+		return pickOutInterpretNumbers(target.split("(["
+				+ lowPriorityOperators() + "])"));
+	}
+
+	/**
+	 * 文字列を優先順位の高い演算子で分割
+	 *
+	 * @param target
+	 * @return
+	 */
+	private List<String> pickOutSecondInterpretNumbers(String target) {
+		return pickOutInterpretNumbers(target.split("(["
+				+ highPriorityOperators() + "])"));
+	}
+
+	/**
+	 * 数値の抽出
+	 *
+	 * @param target
+	 * @return
+	 */
+	private List<String> pickOutInterpretNumbers(String[] target) {
+		List<String> list = new ArrayList<String>();
+		for (String str : target) {
+			list.add(str);
+		}
+		return list;
+	}
+
+	/**
+	 * 優先度高の演算子を含んでいるか判定
+	 *
+	 * @param target
+	 * @return
+	 */
+	private boolean containsPrioritOperator(String target) {
+		return target.matches(".*[" + highPriorityOperators() + "].*");
+	}
+
+	/**
+	 * 剰余の計算
+	 *
+	 * @param equation
+	 * @return
+	 */
+	private String calcMultiAndDivide(String equation) {
+		OPERATOR[] operators = pickOutHighPriorityOperators(equation).toArray(
+				new OPERATOR[0]);
+		String[] elements = pickOutSecondInterpretNumbers(equation).toArray(
+				new String[0]);
+		Calc calc = null;
+		for (int i = 0; i < elements.length; i++) {
+			String element = elements[i];
+			// ()を計算する
+			element = new BlacketCalcurator().calcurate(element);
+			Calc tmpCalc = operators[i].createFormula(DefConverter.CODE.MINUS
+					.viewFromCode(element));
+			if (calc == null) {
+				calc = tmpCalc;
+			} else {
+				calc.join(tmpCalc);
+			}
+		}
+		return calc.interpret();
+	}
+
+}

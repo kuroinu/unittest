@@ -1,0 +1,24 @@
+package ex.practice.calc.calucurator;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.experimental.runners.Enclosed;
+import org.junit.runner.RunWith;
+
+@RunWith(Enclosed.class)
+public class CalcuratorTest {
+	Calcurator target;
+
+	@Before
+	public void setUp() throws Exception {
+		target = new Calcurator();
+	}
+
+	@Test
+	public void test() {
+		fail("まだ実装されていません");
+	}
+
+}

@@ -1,0 +1,83 @@
+package ex.practice.fizzbuzz;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.when;
+
+import org.junit.experimental.categories.Category;
+import org.junit.experimental.runners.Enclosed;
+import org.junit.experimental.theories.DataPoint;
+import org.junit.experimental.theories.DataPoints;
+import org.junit.experimental.theories.Theories;
+import org.junit.experimental.theories.Theory;
+import org.junit.runner.RunWith;
+
+import ex.practice.categories.categories.AllTest;
+import ex.practice.categories.categories.FirstTest;
+
+/**
+ * TDD勉強会第1回<br/>
+ * FizzBuzzクラスのテスト
+ *
+ * @author mitsunorinaraoka
+ *
+ */
+@RunWith(Enclosed.class)
+public class FizzBuzzTest {
+
+	@RunWith(Theories.class)
+	public static class Actionメソッドで各数値が指定された場合 {
+		@DataPoints
+		public static Fixture[] DATAS = { new Fixture(2, "2"),
+				new Fixture(3, "Fizz"), new Fixture(4, "4"),
+				new Fixture(5, "Buzz"), new Fixture(6, "Fizz"),
+				new Fixture(14, "14"), new Fixture(15, "FizzBuzz"),
+				new Fixture(16, "16") };
+
+		@Category({ AllTest.class, FirstTest.class })
+		@Theory
+		public void FizzBuzzの対応文字列を出力している(Fixture data) {
+			FizzBuzz fizzbuzz = new FizzBuzz();
+			assertThat(fizzbuzz.action(data.parameter), is(data.expected));
+		}
+
+		static class Fixture {
+			int parameter;
+			String expected;
+
+			Fixture(int parameter, String expected) {
+				this.parameter = parameter;
+				this.expected = expected;
+			}
+		}
+	}
+
+	@RunWith(Theories.class)
+	public static class getFizzBuzzRandomNumberメソッドでランダム数のジェネレータを指定した場合 {
+		@DataPoint
+		public static Fixture Fizzの組み合わせが正しいこと = new Fixture(3, "Fizz");
+
+		@Category({ AllTest.class, FirstTest.class })
+		@Theory
+		public void FizzBuzzの対応文字列を出力している(Fixture data) {
+			FizzBuzz fizzbuzz = new FizzBuzz();
+			FizzBuzz.RtnData actual = fizzbuzz
+					.getFizzBuzzRandomNumber(data.randmoizer);
+			System.out.println(actual.result);
+			assertThat(actual, is(data.expected));
+		}
+
+		static class Fixture {
+			IRandmizer randmoizer;
+			FizzBuzz.RtnData expected;
+
+			Fixture(int parameter, String expected) {
+				IRandmizer mock = spy(new Randomizer());
+				when(mock.generic()).thenReturn(parameter);
+				this.randmoizer = mock;
+				this.expected = new FizzBuzz.RtnData(parameter, expected);
+			}
+		}
+	}
+}

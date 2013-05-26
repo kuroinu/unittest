@@ -1,0 +1,73 @@
+package ex.practice.calc.converter;
+
+import ex.practice.calc.calucurator.Calcurator;
+
+public class DefConverter {
+
+	/**
+	 * +-コード
+	 *
+	 * @author mitsunorinaraoka
+	 *
+	 */
+	public enum CODE {
+		MINUS(Calcurator.OPERATOR.SUBTRACT.getValue(), "M"), POWER(
+				Calcurator.OPERATOR.POW.getValue(), "^");
+		private String view;
+		private String code;
+
+		CODE(String original, String disp) {
+			this.view = original;
+			this.code = disp;
+		}
+
+		public String original() {
+			return view;
+		}
+
+		public String disp() {
+			return code;
+		}
+
+		public String viewFromCode(String target) {
+			return target.replaceAll(code, view);
+		}
+
+		public String codeFromView(String target) {
+			return target.replaceAll(view, code);
+		}
+	}
+
+	/**
+	 * ()を定義
+	 *
+	 * @author mitsunorinaraoka
+	 *
+	 */
+	public enum BLACKET {
+		LEFT("("), RIGHT(")");
+		private String value;
+
+		BLACKET(String value) {
+			this.value = value;
+		}
+
+		public String getValue() {
+			return value;
+		}
+	}
+
+	public enum PRECALFORMULA {
+		ROOT("√"), LOG("L");
+		private String value;
+
+		PRECALFORMULA(String value) {
+			this.value = value;
+		}
+
+		public String getValue() {
+			return value;
+		}
+	}
+
+}
